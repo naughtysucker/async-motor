@@ -104,6 +104,7 @@ public:
     {
         while (1)
         {
+            std::this_thread::sleep_for(std::chrono::milliseconds(700));
             std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
             try
             {
@@ -118,6 +119,7 @@ public:
             std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
             // printf("Sync spends: %lld ms\n", std::chrono::duration_cast<std::chrono::milliseconds>(end - begin).count());
 
+            std::this_thread::sleep_for(std::chrono::milliseconds(400));
             begin = std::chrono::steady_clock::now();
             try
             {
